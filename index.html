@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+  <title>Super App</title>
+</head>
+<body>
+  <script>
+    //div для блока с текстом
+   const div = document.createElement("div");
+   div.style.display ="flex";
+   div.style.justifyContent = "center"
+   document.body.prepend(div)
+
+   const block = document.createElement("div")
+   block.textContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor provident molestiae, ipsum nemo"
+   block.style.border= "1px solid #b00000";
+   block.style.width = "30%";
+   block.style.padding = "10px";
+   block.style.borderRadius = "10px"
+   div.appendChild(block)
+
+
+  //div для списка
+  const divUl =document.createElement("div")
+  divUl.style.display ="flex";
+  divUl.style.justifyContent = "center"
+  document.body.append(divUl)
+
+  //Список с ссылками
+  const ul = document.createElement("ul");
+  ul.style.display = "flex";
+  ul.style.listStyle ="none"
+  ul.style.paddingInlineEnd = "40px"
+  ul.style.width = "32%";
+  ul.style.justifyContent = "space-between"
+ 
+ //ссылки 
+  const intocode = document.createElement("li");
+  const linkIntocode = document.createElement("a");
+  linkIntocode.href = "https://intocode.ru/";
+  linkIntocode.textContent = "intocode";
+  intocode.append(linkIntocode)
+
+  const google = document.createElement("li");
+  const linkGoogle = document.createElement("a");
+  linkGoogle.href = "https://www.google.com/";
+  linkGoogle.textContent = "google";
+  google.append(linkGoogle)
+
+   
+  const instagram = document.createElement("li");
+  const linkInstagram = document.createElement("a");
+  linkInstagram.href = "https://z-p15.www.instagram.com/accounts/login/?next=/accounts/edit/";
+  linkInstagram.textContent = "instagram";
+  instagram.append(linkInstagram)
+
+  ul.appendChild(intocode);
+  ul.appendChild(google);
+  ul.appendChild(instagram);
+
+  divUl.appendChild(ul)
+  </script>
+</body>
+</html>
